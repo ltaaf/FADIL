@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Flight Deck | Carte de Visite</title>
+    <style>
+        body {
+            background: radial-gradient(circle at center, #1e293b, #0f172a, #020617);
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        .aero-border {
+            border-left: 4px solid #f97316; /* Orange aéronautique */
+        }
+        .radar-pulse {
+            position: relative;
+        }
+        .radar-pulse::after {
+            content: '';
+            position: absolute;
+            width: 100%; height: 100%;
+            border: 2px solid #38bdf8;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="max-w-md w-full glass-panel rounded-3xl overflow-hidden">
+        
+        <div class="p-8 text-center border-b border-sky-900/50">
+            <div class="mb-4 flex justify-center">
+                <div class="radar-pulse w-24 h-24 rounded-full overflow-hidden border-2 border-sky-400">
+                    <img src="https://via.placeholder.com/150" alt="Pilote" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <h1 class="text-2xl font-bold tracking-widest uppercase">Alexandre Dupont</h1>
+            <p class="text-sky-400 text-sm font-mono mt-1 underline decoration-orange-500">INGÉNIEUR AÉRO & PILOTE</p>
+        </div>
+
+        <div class="p-6 space-y-4">
+            
+            <a href="mailto:contact@exemple.com" class="block aero-border bg-sky-950/30 p-4 rounded-r-xl hover:bg-sky-900/50 transition">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <p class="text-xs text-sky-500 font-mono">COMMUNICATION</p>
+                        <p class="font-bold text-lg">Email Direct</p>
+                    </div>
+                    <span class="text-2xl">✉️</span>
+                </div>
+            </a>
+
+            <div class="grid grid-cols-2 gap-4">
+                <a href="https://www.linkedin.com/in/abdel-fadil-afo-896012180/" class="bg-sky-950/30 p-4 rounded-xl border border-sky-900 hover:border-sky-400 transition">
+                    <p class="text-[10px] text-sky-500 font-mono uppercase">Social</p>
+                    <p class="font-bold">LinkedIn</p>
+                </a>
+                <a href="https://www.instagram.com/ltaaf18/" class="bg-sky-950/30 p-4 rounded-xl border border-sky-900 hover:border-sky-400 transition">
+                    <p class="text-[10px] text-sky-500 font-mono uppercase">Images</p>
+                    <p class="font-bold">Instagram</p>
+                </a>
+            </div>
+
+            <a href="#" class="block bg-sky-950/30 p-4 rounded-xl border border-sky-900 hover:border-orange-500 transition">
+                <div class="flex items-center space-x-4">
+                    <span class="text-xl">📍</span>
+                    <div>
+                        <p class="text-xs text-sky-500 font-mono italic">BASE OPÉRATIONNELLE</p>
+                        <p class="text-sm">Aéroport de Toulouse-Blagnac, Hangar 4</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="p-6 pt-0">
+            <button class="w-full bg-orange-600 hover:bg-orange-500 text-white font-black py-4 rounded-xl shadow-lg transition transform active:scale-95 uppercase tracking-tighter">
+                📥 Enregistrer Contact (VCF)
+            </button>
+            <p class="text-[9px] text-center text-sky-900 mt-4 font-mono">SYSTEM READY // SCAN COMPLETED</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

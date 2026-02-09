@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Flight Deck | Digital Card</title>
+    <style>
+        body {
+            /* background: radial-gradient(circle at center, #1e293b, #0f172a, #020617); */
+            background: radial-gradient(circle at center, #ffffff, #ffffff, #ffffff);
+
+            color: #e2e8f0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            /* border: 1px solid rgb(252, 252, 252); */
+
+        }
+        .aero-btn {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: all 0.3s ease;
+        }
+        .aero-btn:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+        }
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: rgba(56, 189, 248, 0.1);
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="max-w-md w-full glass-panel rounded-3xl overflow-hidden shadow-2xl">
+        
+        <div class="p-8 text-center">
+            <div class="relative inline-block mb-4">
+                <img src="img/fadil.png" alt="Profil" class="w-29 h-29 rounded-full border-2 border-sky-400 p-1">
+                <div class="absolute inset-0 rounded-full border border-sky-400 animate-ping opacity-20"></div>
+            </div>
+            <h1 class="text-2xl font-bold tracking-widest uppercase">AFO ABDEL FADIL</h1>
+            <p class="text-sky-400 text-xs font-mono tracking-tighter mt-1 italic">AGENT CHECK-IN AEROPORT INTERNATIONAL DE LOME</p>
+        </div>
+
+        <div class="px-6 pb-8 space-y-3">
+            
+            <a href="https://www.linkedin.com/in/abdel-fadil-afo-896012180/" class="aero-btn flex items-center p-3 rounded-xl">
+                <div class="icon-box text-blue-400"><i class="fab fa-linkedin-in text-xl"></i></div>
+                <div>
+                    <p class="text-[10px] text-sky-500 font-mono uppercase">Network</p>
+                    <p class="font-semibold text-sm">LinkedIn</p>
+                </div>
+            </a>
+
+            <a href="https://wa.me/+22890493789" class="aero-btn flex items-center p-3 rounded-xl border-l-4 border-l-green-500">
+                <div class="icon-box text-green-400"><i class="fab fa-whatsapp text-xl"></i></div>
+                <div>
+                    <p class="text-[10px] text-green-500 font-mono uppercase">Secure Line</p>
+                    <p class="font-semibold text-sm">WhatsApp</p>
+                </div>
+            </a>
+
+            <div class="grid grid-cols-2 gap-3">
+                <a href="https://www.instagram.com/ltaaf18/" class="aero-btn flex items-center p-3 rounded-xl">
+                    <div class="icon-box text-pink-400"><i class="fab fa-instagram text-xl"></i></div>
+                    <p class="font-semibold text-sm text-center">Instagram</p>
+                </a>
+                <a href="https://www.snapchat.com/add/ltaaf18?share_id=-Jew1b3iCkE&locale=fr-TG" class="aero-btn flex items-center p-3 rounded-xl">
+                    <div class="icon-box text-yellow-400"><i class="fab fa-snapchat-ghost text-xl"></i></div>
+                    <p class="font-semibold text-sm">Snapchat</p>
+                </a>
+            </div>
+
+            <a href="mailto:contact@exemple.com" class="aero-btn flex items-center p-3 rounded-xl mt-4">
+                <div class="icon-box text-sky-300"><i class="fas fa-envelope text-xl"></i></div>
+                <div class="flex-grow">
+                    <p class="text-[10px] text-sky-500 font-mono uppercase">E-Mail</p>
+                    <p class="font-semibold text-sm italic">AFOFADIL18@GMAIL.COM</p>
+                </div>
+                <i class="fas fa-arrow-right text-xs opacity-30"></i>
+            </a>
+
+            <button class="w-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-black py-4 rounded-xl shadow-lg transition mt-6 uppercase tracking-widest text-xs">
+                <i class="fas fa-user-plus mr-2"></i> Save Contact
+            </button>
+
+        </div>
+        
+        <div class="bg-sky-400/10 py-2 text-center text-[8px] font-mono tracking-[0.3em] text-sky-400 uppercase">
+            Transponder: Active // Signal: Stable
+        </div>
+    </div>
+
+</body>
+</html>
